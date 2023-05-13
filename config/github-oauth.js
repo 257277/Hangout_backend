@@ -39,4 +39,4 @@ passport3.use(
   )
 );
 
-module.exports = { passport3 };
+module.exports = {passport3};
