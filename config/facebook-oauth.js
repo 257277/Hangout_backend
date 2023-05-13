@@ -36,4 +36,4 @@ passport2.use(
   )
 );
 
-module.exports = { passport2 };
+module.exports = {passport2};
