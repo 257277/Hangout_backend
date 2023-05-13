@@ -10,7 +10,7 @@ passport2.use(
     {
       clientID: process.env.FACEBOOK_APP_ID,
       clientSecret: process.env.FACEBOOK_APP_SECRET,
-      callbackURL: "http://localhost:8080/facebook/auth/facebook/callback",
+      callbackURL: "https://zany-gray-clownfish-shoe.cyclic.app/facebook/auth/facebook/callback",
       profileFields: ["id", "displayName", "photos", "email"],
     },
     async function (accessToken, refreshToken, profile, cb) {
