@@ -58,6 +58,7 @@ io.on("connection", (socket) => {
       console.log(data.id);
       // io.to(`${roomName}`).emit("display_friend_msg", msg);
       socket.to(`${data.id}`).to(`${roomName}`).emit("display_friend_msg", x);
+      x = null;
     })
 
   })
