@@ -27,7 +27,7 @@ githubRouter.get(
   }),
   function (req, res) {
     let user = req.user;
-    res.redirect(`${process.env.base_url}/frontend/masseges.html?id=${user._id}`);
+    res.redirect(`${process.env.base_url}/masseges.html?id=${user._id}`);
 
   }
 );
