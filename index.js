@@ -3,10 +3,10 @@ require("dotenv").config();
 const cors = require("cors");
 const { connection } = require("./config/db");
 const { userRouter } = require("./routes/user.route");
-const { githubRouter } = require("./loginRoute/github.route");
-const { googlerouter } = require("./loginRoute/g-oauthroute");
+// const { githubRouter } = require("./loginRoute/github.route");
+// const { googlerouter } = require("./loginRoute/g-oauthroute");
 const { authmiddleware } = require("./middleware/authenticate");
-const { fbrouter } = require("./loginRoute/fb-oauthrout");
+// const { fbrouter } = require("./loginRoute/fb-oauthrout");
 const cookieParser = require("cookie-parser");
 const { detailUserRoute } = require("./routes/detailroute");
 const app = express();
@@ -62,9 +62,9 @@ io.on("connection", (socket) => {
 
 // <------------   Socket end ----------------->
 app.use("/user", userRouter);
-app.use("/", githubRouter);
-app.use("/google", googlerouter);
-app.use("/facebook", fbrouter);
+// app.use("/", githubRouter);
+// app.use("/google", googlerouter);
+// app.use("/facebook", fbrouter);
 app.use("/details", detailUserRoute);
 
 server.listen(process.env.port, async () => {
